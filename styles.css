@@ -86,7 +86,7 @@ h1 {
     body {
         padding: 10px;
         background-size: cover;
-        background-attachment: scroll;
+        background-attachment: fixed;
     }
     
     .mainclass {
