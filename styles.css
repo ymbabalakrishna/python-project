@@ -63,6 +63,24 @@ h1 {
     animation: fadeIn 0.8s ease-in;
 }
 
+.petal {
+    position: fixed;
+    pointer-events: none;
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotateZ(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes sway {
+    0%, 100% { transform: translateX(0px); }
+    50% { transform: translateX(20px); }
+}
+
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
     body {

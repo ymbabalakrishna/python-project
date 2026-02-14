@@ -12,6 +12,29 @@ btn.addEventListener('click', function() {
     const audio = document.querySelector('#bgAudio');
     audio.play();
     
+    // Hide the button
+    btn.style.display = 'none';
+    
+    // Create falling rose petals/confetti effect
+    function createPetal() {
+        const petal = document.createElement('div');
+        petal.classList.add('petal');
+        petal.innerHTML = '❤️'; // Rose petal emoji
+        petal.style.left = Math.random() * 100 + 'vw';
+        petal.style.top = '-10px';
+        petal.style.fontSize = (Math.random() * 20 + 20) + 'px';
+        petal.style.opacity = Math.random() * 0.5 + 0.5;
+        petal.style.animation = `fall ${Math.random() * 2 + 3}s linear forwards`;
+        document.body.appendChild(petal);
+        
+        setTimeout(() => petal.remove(), 5000);
+    }
+    
+    // Create multiple petals
+    for (let i = 0; i < 20; i++) {
+        setTimeout(createPetal, i * 100);
+    }
+    
     // Secondary action: Provide feedback on the button
     btn.textContent = "Message Sent!";
     btn.disabled = true;
@@ -19,12 +42,6 @@ btn.addEventListener('click', function() {
     // Logic check: Add a console log for debugging (Analytics)
     console.log("Surprise message triggered successfully.");
     
-    // Reset button after 3 seconds
-    setTimeout(() => {
-        btn.textContent = "Click for a surprise!";
-        btn.disabled = false;
-    }, 3000);
-
     // add image of siri from image folder
     const existingImg = document.querySelector('.siri-image');
     if (!existingImg) {
