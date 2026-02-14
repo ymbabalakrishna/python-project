@@ -6,6 +6,7 @@ body{
     background-image: url('images/val.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: scroll;
 }
 
 h1 {
@@ -58,7 +59,7 @@ h1 {
     body {
         padding: 10px;
         background-size: cover;
-        background-attachment: fixed;
+        background-attachment: scroll;
     }
     
     .mainclass {
@@ -86,7 +87,7 @@ h1 {
     body {
         padding: 5px;
         background-size: cover;
-        background-attachment: fixed;
+        background-attachment: scroll;
     }
     
     .mainclass {
