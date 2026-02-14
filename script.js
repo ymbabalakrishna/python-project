@@ -24,4 +24,11 @@ btn.addEventListener('click', function() {
         btn.textContent = "Click for a surprise!";
         btn.disabled = false;
     }, 3000);
+
+    // add image of siri from image folder
+    const img = document.createElement('img');
+    img.src = 'images/siri.jpeg';
+    img.alt = 'Siri Image';
+    img.classList.add('siri-image');
+    document.querySelector('.mainclass').appendChild(img);
 });
