@@ -6,7 +6,7 @@ const title = document.querySelector('#message');
 // 2. Add a single event listener
 btn.addEventListener('click', function() {
     // Primary action: Update the greeting
-    title.textContent = "You make every day special, Shireesha! ❤️";
+    title.textContent = "You make every day special, Shireesha! ❤️ Happy Valentine's Day!";
     
     // Play background audio
     const audio = document.querySelector('#bgAudio');
