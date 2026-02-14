@@ -26,9 +26,12 @@ btn.addEventListener('click', function() {
     }, 3000);
 
     // add image of siri from image folder
-    const img = document.createElement('img');
-    img.src = 'images/siri.jpeg';
-    img.alt = 'Siri Image';
-    img.classList.add('siri-image');
-    document.querySelector('.mainclass').appendChild(img);
+    const existingImg = document.querySelector('.siri-image');
+    if (!existingImg) {
+        const img = document.createElement('img');
+        img.src = 'images/siri.jpeg';
+        img.alt = 'Siri Image';
+        img.classList.add('siri-image');
+        document.querySelector('.mainclass').appendChild(img);
+    }
 });
