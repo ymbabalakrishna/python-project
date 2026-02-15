@@ -13,7 +13,7 @@ h1 {
     color: #ebebeb;
     text-align: center;
     text-shadow: #dee5ec 2px 2px 4px;
-}
+    }
 
 .button {
     display: inline-block;
@@ -68,6 +68,13 @@ h1 {
     pointer-events: none;
     animation: fall 3s linear forwards;
 }
+
+.siri-image {
+        max-width: 90%;
+        margin-top: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
 
 @keyframes fall {
     to {
@@ -145,5 +152,39 @@ h1 {
     .siri-image {
         max-width: 95%;
         margin-top: 15px;
+    }
+}
+/* Additional breakpoint for larger tablets and small desktops */
+@media (max-width: 1024px) {
+    body {
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    .mainclass {
+        height: auto;
+        min-height: 100vh;
+        padding: 30px;
+        gap: 20px;
+    }
+    
+    .button {
+        padding: 14px 28px;
+        font-size: 18px;
+        width: auto;
+    }
+    
+    #message {
+        font-size: 22px;
+        margin-top: 25px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    .siri-image {
+        max-width: 80%;
+        margin-top: 25px;
     }
 }
